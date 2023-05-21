@@ -1,5 +1,6 @@
 @use '../vendors/sassify' as sassify;
 @use '../abstracts/variables' as vars;
+@use '../abstracts/mixins/antialias' as *;
 
 /// Свойство `-webkit-touch-callout` CSS управляет отображением выноски по умолчанию,
 /// отображаемой при касании и удержании цели касания.
@@ -23,18 +24,11 @@ body {
 	font-family: 'Fira Sans', sans-serif;
 	margin: 0;
 	scroll-behavior: smooth;
+	padding: 1em 1.2em;
 
 
-	// https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-
-	// https://clck.ru/NNamf
-	@include sassify.prefixer(
-		text-size-adjust,
-		100%,
-		webkit
-	);
+	@include sassify.prefixer(text-size-adjust, 100%, webkit); // https://clck.ru/NNamf
+	@include antialias();
 
 }
 
@@ -47,10 +41,10 @@ body {
 /// @access public
 img {
 
-	@include sassify.size(100%, 100%, 'max');
-
 	border-style: none;
 	overflow: none;
 	vertical-align: middle;
+
+	@include sassify.size(100%, 100%, 'max');
 
 }

@@ -1,0 +1,14 @@
+/// Сглаживание шрифта на уровне пикселя, а не субпикселя. Переключение с
+/// субпиксельного рендеринга на сглаживание для светлого текста на темном фоне
+/// делает его светлее.
+/// ---
+/// @name antialias
+/// @group Abstracts
+/// @since 21.05.2023
+/// @access public
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth mdn web docs
+/// @type mixin
+@mixin antialias() {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

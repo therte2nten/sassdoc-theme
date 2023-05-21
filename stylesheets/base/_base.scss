@@ -1,20 +1,16 @@
 @use '../vendors/sassify' as sassify;
-
 @use '../abstracts/variables' as vars;
 
-@-ms-viewport {
-	width: device-width;
-}
-
-@-o-viewport {
-	width: device-width;
-}
-
-@viewport {
-	width: device-width;
-}
-
-// https://clck.ru/9HHvq
+/// Свойство `-webkit-touch-callout` CSS управляет отображением выноски по умолчанию,
+/// отображаемой при касании и удержании цели касания.
+///
+/// Когда цель касается и удерживается на iOS, Safari отображает информацию о ссылке.
+/// Это свойство позволяет отключить такое поведение.
+/// ---
+/// @group Base
+/// @since 21.05.2023
+/// @access public
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-touch-callout mdn web docs
 *,
 *::before,
 *::after {
@@ -43,6 +39,12 @@ body {
 }
 
 
+/// Стили для тега `img`
+/// ---
+/// @name h6
+/// @group Base
+/// @since 21.05.2023
+/// @access public
 img {
 
 	@include sassify.size(100%, 100%, 'max');

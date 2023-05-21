@@ -1,0 +1,72 @@
+@use '../abstracts/variables' as vars;
+
+/// Общие стили заголовков
+/// ---
+/// @name h1, h2, h3, h4, h5, h6
+/// @group Base
+/// @since 21.05.2023
+/// @access public
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 0.5rem;
+	font-weight: bold;
+}
+
+/// Размер шрифта для заголовка `h1`
+/// ---
+/// @name h1
+/// @group Base
+/// @since 21.05.2023
+/// @access public
+h1 {
+	font-size: vars.$font-size_h1;
+}
+
+/// Размер шрифта для заголовка `h2`
+/// ---
+/// @name h2
+/// @group Base
+/// @since 21.05.2023
+/// @access public
+h2 {
+	font-size: vars.$font-size_h2;
+}
+
+/// Размер шрифта для заголовка `h3`
+/// ---
+/// @name h3
+/// @group Base
+/// @since 21.05.2023
+/// @access public
+h3 {
+	font-size: vars.$font-size_h3;
+}
+
+/// Размер шрифта для заголовка `h4`
+/// ---
+/// @name h4
+/// @group Base
+/// @since 21.05.2023
+/// @access public
+h4 {
+	font-size: vars.$font-size_h4;
+}
+
+/// Размер шрифта для заголовка `h5`
+/// ---
+/// @name h5
+/// @group Base
+/// @since 21.05.2023
+/// @access public
+h5 {
+	font-size: vars.$font-size_h5;
+}
+
+/// Размер шрифта для заголовка `h6`
+/// ---
+/// @name h6
+/// @group Base
+/// @since 21.05.2023
+/// @access public
+h6 {
+	font-size: vars.$font-size_h6;
+}

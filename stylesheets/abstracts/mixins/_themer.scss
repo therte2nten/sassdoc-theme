@@ -1,0 +1,38 @@
+@use '../../themes/default' as *;
+
+/// Миксин, генерирующий корневой `:root` с переменными,
+/// определяющими тему.
+/// ---
+/// @name themer
+/// @group Abstracts
+/// @since 21.05.2023
+/// @access public
+/// @type mixin
+/// @param {string} $map - карта (`Map`), из которой будут забираться
+/// 	токены для составления `:root` с кастомными свойствами CSS
+@mixin themer($map) {
+
+	// С помощью `@each` проходимся по карте
+	// `$theme` и "выдёргиваем" `$-theme-name`
+	// и `$-map`:
+	@each $-theme-name, $-map in $map {
+
+		// Создаем корневой `:root` с атрибутом `class`:
+		:root[class="theme-#{$-theme-name}"] {
+			color-scheme: #{$-theme-name};
+
+			// С помощью `@each` проходимся по карте `$-map`
+			// и "выдёргиваем" оттуда `$-key` и `$-value`,
+			// а после генерируем список кастомных свойств CSS:
+			@each $-key, $-value in $-map {
+				--#{$--key}: #{$value};
+			}
+
+		}
+
+	}
+
+}
+
+// Вызываем миксин `themer`:
+@include themer($theme);

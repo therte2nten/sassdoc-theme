@@ -1,0 +1,11 @@
+{
+	"themeConfig": {
+		"title": "Документация проекта Sassify",
+		"description": "Страница документации проекта Sassify, который является большим наборов миксинов и функций, написанных на языке CSS-препроцессора Sass.",
+		"url": null,
+		"lang": "ru",
+		"socialImageUrl": null,
+		"themeColor": "#000000",
+		"faviconPath": null
+	}
+}

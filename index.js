@@ -1,3 +1,5 @@
+var themeConfig = require('./theme-config.json');
+
 /**
  * Themeleon template helper, using consolidate.js module.
  *
@@ -7,7 +9,7 @@
 var themeleon = require('themeleon')().use('consolidate');
 
 /**
- * Utility function we will use to merge a default configuration
+ * Utility function we will use to merge a themeConfigault configuration
  * with the user object.
  */
 var extend = require('extend');
@@ -41,36 +43,36 @@ var theme = themeleon(__dirname, function (t) {
    * Render `views/index.nunjucks` with the theme's context (`ctx` below)
    * as `index.html` in the destination directory.
    */
-  t.nunjucks('pages/index.njk', 'index.html');
+  t.nunjucks('views/index.njk', 'index.html');
 });
 
 /**
  * Actual theme function. It takes the destination directory `dest`
  * (that will be handled by Themeleon), and the context variables `ctx`.
  *
- * Here, we will modify the context to have a `view` key defaulting to
+ * Here, we will modify the context to have a `view` key themeConfigaulting to
  * a literal object, but that can be overriden by the user's
  * configuration.
  */
 module.exports = function (dest, ctx) {
-  var def = {
-    display: {
-      access: ['public', 'private'],
-      alias: false,
-      watermark: true,
-    },
-    groups: {
-      'undefined': 'General',
-    },
-    'shortcutIcon': 'http://sass-lang.com/favicon.ico',
-  };
+  // var themeConfig = {
+  //   display: {
+  //     access: ['public', 'private'],
+  //     alias: false,
+  //     watermark: true,
+  //   },
+  //   groups: {
+  //     'unthemeConfigined': 'General',
+  //   },
+  //   'shortcutIcon': 'http://sass-lang.com/favicon.ico',
+  // };
 
-  // Apply default values for groups and display.
-  ctx.groups = extend(def.groups, ctx.groups);
-  ctx.display = extend(def.display, ctx.display);
+  // Apply themeConfigault values for groups and display.
+  // ctx.groups = extend(themeConfig.groups, ctx.groups);
+  // ctx.display = extend(themeConfig.display, ctx.display);
 
   // Extend top-level context keys.
-  ctx = extend({}, def, ctx);
+  ctx = extend({}, themeConfig, ctx);
 
   /**
    * Parse text data (like descriptions) as Markdown, and put the
@@ -87,7 +89,7 @@ module.exports = function (dest, ctx) {
    * Add a `display` property for each data item regarding of display
    * configuration (hide private items and aliases for example).
    *
-   * You'll need to add default values in your `.sassdocrc` before
+   * You'll need to add themeConfigault values in your `.sassdocrc` before
    * using this filter:
    *
    *     {
@@ -99,7 +101,7 @@ module.exports = function (dest, ctx) {
    *
    * See <http://sassdoc.com/extra-tools/#display-toggle>.
    */
-  extras.display(ctx);
+  // extras.display(ctx);
 
   /**
    * Allow the user to give a name to the documentation groups.
@@ -107,7 +109,7 @@ module.exports = function (dest, ctx) {
    * We can then have `@group slug` in the docblock, and map `slug`
    * to `Some title string` in the theme configuration.
    *
-   * **Note:** all items without a group are in the `undefined` group.
+   * **Note:** all items without a group are in the `unthemeConfigined` group.
    *
    * See <http://sassdoc.com/extra-tools/#groups-aliases>.
    */

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="{{ themeConfig.lang }}">
+	<head>
+
+		<title>{{ themeConfig.title }}</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+		{# Короткое описание страницы (ограничение — 150 символов) #}
+		<meta name="description" content="{{ themeConfig.description }}">
+
+		{# Facebook Meta Tags #}
+		<meta property="og:url" content="{{ themeConfig.url }}">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="{{ themeConfig.title }}">
+		<meta property="og:description" content="{{ themeConfig.description }}">
+
+		{# Twitter Meta Tags #}
+		<meta name="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="{{ themeConfig.url }}">
+		<meta name="twitter:title" content="{{ themeConfig.title }}">
+		<meta name="twitter:description" content="{{ themeConfig.description }}">
+
+		{% if themeConfig.socialImageUrl != null %}
+			<meta property="og:image" content="{{ themeConfig.socialImageUrl }}">
+			<meta name="twitter:image" content="{{ themeConfig.socialImageUrl }}">
+		{% endif %}
+
+		{# Контролирует поведение поисковых систем при индексации страницы #}
+		<meta name="robots" content="index,follow"> {# Все поисковые системы #}
+		<meta name="googlebot" content="index,follow"> {# Указание отдельно для Google #}
+
+		{# Добавить на домашний экран #}
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+
+		{# Theme Color for Chrome, Firefox OS and Opera #}
+		<meta name="theme-color" content="{{ themeConfig.themeColor if themeConfig.themeColor else '#000000' }}">
+		<meta name="msapplication-TileColor" content="{{ themeConfig.themeColor if themeConfig.themeColor else "#000000" }}">
+		<meta name="apple-mobile-web-app-status-bar-style" content="{{ themeConfig.themeColor if themeConfig.themeColor else "#000000" }}">
+		<meta name="color-scheme" content="dark light">
+
+		<meta name="application-name" content="{{ themeConfig.title }}">
+		<meta name="apple-mobile-web-app-title" content="{{ themeConfig.title }}">
+
+		{# Фавиконки #}
+		{% if themeConfig.faviconPath != null %}
+			<link rel="apple-touch-icon" sizes="180x180" href="{{ themeConfig.faviconPath }}/apple-touch-icon.png">
+			<link rel="icon" type="image/png" sizes="32x32" href="{{ themeConfig.faviconPath }}/favicon-32x32.png">
+			<link rel="icon" type="image/png" sizes="16x16" href="{{ themeConfig.faviconPath }}/favicon-16x16.png">
+			<link rel="manifest" href="{{ themeConfig.faviconPath }}/site.webmanifest">
+			<link rel="shortcut icon" href="{{ themeConfig.faviconPath }}/favicon.ico">
+		{% endif %}
+
+		{# Стили #}
+		<link rel="stylesheet" href="assets/stylesheets/vendors/normalize.css">
+		<link rel="stylesheet" href="assets/stylesheets/main.css">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+
+		{# Шрифты #}
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+	</head>
+	<body>
+	<h1>{{ themeConfig.title }}</h1>
+	</body>
+</html>

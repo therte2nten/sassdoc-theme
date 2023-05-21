@@ -1,0 +1,62 @@
+/// @name $font-size
+/// @group Abstracts
+/// @since 21.05.2023
+/// @access public
+/// @type string
+$font-size: 1rem;
+
+/// @name $font-size_lg
+/// @group Abstracts
+/// @since 21.05.2023
+/// @access public
+/// @type string
+$font-size_lg: $font-size * 1.25;
+
+/// @name $font-size_sm
+/// @group Abstracts
+/// @since 21.05.2023
+/// @access public
+/// @type string
+$font-size_sm: $font-size * .875;
+
+/// @name $font-size_h1
+/// @group Abstracts
+/// @since 21.05.2023
+/// @access public
+/// @type string
+$font-size_h1: $font-size * 2.5;
+
+/// @name $font-size_h2
+/// @group Abstracts
+/// @since 21.05.2023
+/// @access public
+/// @type string
+$font-size_h2: $font-size * 2;
+
+/// @name $font-size_h3
+/// @group Abstracts
+/// @since 21.05.2023
+/// @access public
+/// @type string
+$font-size_h3: $font-size * 1.75;
+
+/// @name $font-size_h4
+/// @group Abstracts
+/// @since 21.05.2023
+/// @access public
+/// @type string
+$font-size_h4: $font-size * 1.5;
+
+/// @name $font-size_h5
+/// @group Abstracts
+/// @since 21.05.2023
+/// @access public
+/// @type string
+$font-size_h5: $font-size * 1.25;
+
+/// @name $font-size_h6
+/// @group Abstracts
+/// @since 21.05.2023
+/// @access public
+/// @type string
+$font-size_h6: $font-size;

@@ -1,0 +1,54 @@
+@use '../vendors/sassify' as sassify;
+
+@use '../abstracts/variables' as vars;
+
+@-ms-viewport {
+	width: device-width;
+}
+
+@-o-viewport {
+	width: device-width;
+}
+
+@viewport {
+	width: device-width;
+}
+
+// https://clck.ru/9HHvq
+*,
+*::before,
+*::after {
+	-webkit-touch-callout: none;
+}
+
+body {
+
+	font-size: vars.$font-size;
+	font-family: 'Fira Sans', sans-serif;
+	margin: 0;
+	scroll-behavior: smooth;
+
+
+	// https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	// https://clck.ru/NNamf
+	@include sassify.prefixer(
+		text-size-adjust,
+		100%,
+		webkit
+	);
+
+}
+
+
+img {
+
+	@include sassify.size(100%, 100%, 'max');
+
+	border-style: none;
+	overflow: none;
+	vertical-align: middle;
+
+}

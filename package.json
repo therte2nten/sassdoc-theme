@@ -4,7 +4,7 @@
   "description": "Минималистичная тема для SassDoc для документации проекта Sassify",
   "scripts": {
     "test": "cd ../sassify-test && npm run sassdoc",
-		"build:css": "npx sass stylesheets/main.scss dist/stylesheets/main.css"
+    "build:css": "npx sass stylesheets:assets/stylesheets"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   "dependencies": {
     "@therteenten/sassify": "^8.0.0",
     "extend": "^3.0.2",
+    "normalize.css": "^8.0.1",
     "nunjucks": "^3.2.4",
     "sassdoc-extras": "^3.0.0",
     "themeleon": "^3.0.2"

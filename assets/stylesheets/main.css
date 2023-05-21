@@ -1,9 +1,15 @@
 :root[class=theme-light] {
   color-scheme: light;
+  --colorBackground: #ffffff;
+  --colorFont: #212121;
+  --colorAccent: #ff0056;
 }
 
 :root[class=theme-dark] {
   color-scheme: dark;
+  --colorBackground: #212121;
+  --colorFont: #fff;
+  --colorAccent: #ff0056;
 }
 
 *,
@@ -18,18 +24,18 @@ body {
   margin: 0;
   scroll-behavior: smooth;
   padding: 1em 1.2em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img {
-  max-width: 100%;
-  max-height: 100%;
   border-style: none;
   overflow: none;
   vertical-align: middle;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -1,4 +1,12 @@
 $theme: (
-	light: (),
-	dark: ()
+	light: (
+		colorBackground: #ffffff,
+		colorFont: #212121,
+		colorAccent: #ff0056
+	),
+	dark: (
+		colorBackground: #212121,
+		colorFont: #fff,
+		colorAccent: #ff0056
+	)
 );

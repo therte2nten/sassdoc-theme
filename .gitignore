@@ -65,7 +65,6 @@ web_modules/
 .cache
 .parcel-cache
 out
-dist
 .vscode-test
 .yarn/cache
 .yarn/unplugged

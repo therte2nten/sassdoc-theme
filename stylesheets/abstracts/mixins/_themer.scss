@@ -18,7 +18,7 @@
 	@each $-theme-name, $-map in $map {
 
 		// Создаем корневой `:root` с атрибутом `class`:
-		:root[class="theme-#{$-theme-name}"] {
+		:root[class='theme-#{$-theme-name}'] {
 			color-scheme: #{$-theme-name};
 
 			// С помощью `@each` проходимся по карте `$-map`

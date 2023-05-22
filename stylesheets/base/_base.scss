@@ -15,17 +15,20 @@
 *,
 *::before,
 *::after {
-	-webkit-touch-callout: none;
+
+	margin: 0;
+	padding: 0;
+
+	@include sassify.box-sizing(border-box);
+	@include sassify.prefixer(touch-callout, none, webkit, false);
+
 }
 
 body {
 
 	font-size: vars.$font-size;
 	font-family: 'Fira Sans', sans-serif;
-	margin: 0;
 	scroll-behavior: smooth;
-	padding: 1em 1.2em;
-
 
 	@include sassify.prefixer(text-size-adjust, 100%, webkit); // https://clck.ru/NNamf
 	@include antialias();

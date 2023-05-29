@@ -7,7 +7,7 @@
 
 :root[class=theme-dark] {
   color-scheme: dark;
-  --colorBackground: #212121;
+  --colorBackground: #000000;
   --colorFont: #fff;
   --colorAccent: #ff0056;
 }

@@ -38,6 +38,7 @@ var theme = themeleon(__dirname, function (t) {
    * destination directory.
    */
   t.copy('assets');
+  t.copy('scripts', 'assets/scripts');
 
   /**
    * Render `views/index.nunjucks` with the theme's context (`ctx` below)

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ themeConfig.lang }}">
+<html lang="{{ themeConfig.lang }}" class="theme-light">
 	<head>
 
 		<title>{{ themeConfig.title }}</title>
@@ -67,10 +67,39 @@
 		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 
+		{# Скрипты #}
+		<script defer src="assets/scripts/themer.js"></script>
 	</head>
 	<body>
 
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						Header
+						<button onclick="toggleTheme()">Toggle</button>
+					</div>
+				</div>
+			</div>
+		</header>
 
+		<main>
+			<div class="container">
+				<div class="row">
+					<div class="col-12">Main</div>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						Footer
+					</div>
+				</div>
+			</div>
+		</footer>
 
 	</body>
 </html>

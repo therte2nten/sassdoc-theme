@@ -1,5 +1,3 @@
-@use 'sassify' as sassify with (
-	$dvalues--grid-minimal-reset: false
-);
+@use 'sassify' as sassify;
 
-@include sassify.grid-init();
+@include sassify.make-grid();

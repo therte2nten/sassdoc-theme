@@ -1,1 +1,3 @@
-@forward '../../node_modules/@therteenten/sassify';
+@forward '../../node_modules/@therteenten/sassify' with (
+	$setting--strict-mode: true
+);

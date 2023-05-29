@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/therteenten/sassify-sassdoc-theme#readme",
   "dependencies": {
-    "@therteenten/sassify": "^8.1.0",
+    "@therteenten/sassify": "^8.1.2",
     "extend": "^3.0.2",
     "normalize.css": "^8.0.1",
     "nunjucks": "^3.2.4",
